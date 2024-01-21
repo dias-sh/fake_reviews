@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="page-container">
+        <!-- Page 1 -->
+        <div class="page" id="page1">
+            <h2>Which is the real review?</h2>
+            <div class="card" onclick="selectCard(this, 1, true)">The Cat Dancer Rainbow Charmer provides a fun and energetic way to interact with your cat. This wand toy elicits jumping, swatting, and pouncing from our tester cats, yielding moderate to extreme levels of cat engagement and play level. The 46" colorful rainbow soft fleece fabric waves around, making a target for our tester cats to pounce at floor level as well as soar high above--they were always ready to play with this toy. The Rainbow Charmer provides a meaningful connection between cat and human, along with the ability to showcase a cat's athleticism and adorable antics, making this toy a winner.</div>
+            <div class="card" onclick="selectCard(this, 1, false)">The Kitty City Cat Tunnel Bed is a delightful and inventive addition to any cat owner's arsenal of pet accessories. Designed with both play and comfort in mind, this product stands out for its multifunctionality. On one hand, it serves as a cozy bed for feline naps. The soft, plush material is inviting and warm, making it an ideal spot for cats to relax and sleep. This aspect of the product is particularly appreciated by owners of cats who seek comfort and security in their resting spots.</div>
+            <button onclick="nextPage(2)">Next</button>
+        </div>
+
+        <!-- Page 2 (hidden initially) -->
+        <div class="page" id="page2">
+            <h2>Which is the real review?</h2>
+            <div class="card" onclick="selectCard(this, 1, true)">The Cat Dancer Rainbow Charmer provides a fun and energetic way to interact with your cat. This wand toy elicits jumping, swatting, and pouncing from our tester cats, yielding moderate to extreme levels of cat engagement and play level. The 46" colorful rainbow soft fleece fabric waves around, making a target for our tester cats to pounce at floor level as well as soar high above--they were always ready to play with this toy. The Rainbow Charmer provides a meaningful connection between cat and human, along with the ability to showcase a cat's athleticism and adorable antics, making this toy a winner.</div>
+            <div class="card" onclick="selectCard(this, 1, false)">The Kitty City Cat Tunnel Bed is a delightful and inventive addition to any cat owner's arsenal of pet accessories. Designed with both play and comfort in mind, this product stands out for its multifunctionality. On one hand, it serves as a cozy bed for feline naps. The soft, plush material is inviting and warm, making it an ideal spot for cats to relax and sleep. This aspect of the product is particularly appreciated by owners of cats who seek comfort and security in their resting spots.</div>
+            <button onclick="nextPage(2)">Next</button>
+        </div>
+
+        <!-- Page 3 (hidden initially) -->
+        <div class="page" id="page3">
+            <h2>Which is the real review?</h2>
+            <div class="card" onclick="selectCard(this, 1, true)">The Cat Dancer Rainbow Charmer provides a fun and energetic way to interact with your cat. This wand toy elicits jumping, swatting, and pouncing from our tester cats, yielding moderate to extreme levels of cat engagement and play level. The 46" colorful rainbow soft fleece fabric waves around, making a target for our tester cats to pounce at floor level as well as soar high above--they were always ready to play with this toy. The Rainbow Charmer provides a meaningful connection between cat and human, along with the ability to showcase a cat's athleticism and adorable antics, making this toy a winner.</div>
+            <div class="card" onclick="selectCard(this, 1, false)">The Kitty City Cat Tunnel Bed is a delightful and inventive addition to any cat owner's arsenal of pet accessories. Designed with both play and comfort in mind, this product stands out for its multifunctionality. On one hand, it serves as a cozy bed for feline naps. The soft, plush material is inviting and warm, making it an ideal spot for cats to relax and sleep. This aspect of the product is particularly appreciated by owners of cats who seek comfort and security in their resting spots.</div>
+            <button onclick="nextPage(2)">Next</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
