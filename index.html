@@ -3,33 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Review Quiz</title>
+    <title>Review Authenticity Quiz</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="page-container">
         <!-- Page 1 -->
         <div class="page" id="page1">
-            <h2>Which is the real review?</h2>
-            <div class="card" onclick="selectCard(this, 1, true)">The Cat Dancer Rainbow Charmer provides a fun and energetic way to interact with your cat. This wand toy elicits jumping, swatting, and pouncing from our tester cats, yielding moderate to extreme levels of cat engagement and play level. The 46" colorful rainbow soft fleece fabric waves around, making a target for our tester cats to pounce at floor level as well as soar high above--they were always ready to play with this toy. The Rainbow Charmer provides a meaningful connection between cat and human, along with the ability to showcase a cat's athleticism and adorable antics, making this toy a winner.</div>
-            <div class="card" onclick="selectCard(this, 1, false)">The Kitty City Cat Tunnel Bed is a delightful and inventive addition to any cat owner's arsenal of pet accessories. Designed with both play and comfort in mind, this product stands out for its multifunctionality. On one hand, it serves as a cozy bed for feline naps. The soft, plush material is inviting and warm, making it an ideal spot for cats to relax and sleep. This aspect of the product is particularly appreciated by owners of cats who seek comfort and security in their resting spots.</div>
-            <button onclick="nextPage(2)">Next</button>
+            <h2>Is this review real or fake?</h2>
+            <div class="card" onclick="selectCard(1, true)">Made well holds all my make brushes, pencils, mascara etc.
+</div>
+            <button onclick="nextPage()">Next</button>
         </div>
 
-        <!-- Page 2 (hidden initially) -->
+        <!-- Page 2 -->
         <div class="page" id="page2">
-            <h2>Which is the real review?</h2>
-            <div class="card" onclick="selectCard(this, 1, true)">The Cat Dancer Rainbow Charmer provides a fun and energetic way to interact with your cat. This wand toy elicits jumping, swatting, and pouncing from our tester cats, yielding moderate to extreme levels of cat engagement and play level. The 46" colorful rainbow soft fleece fabric waves around, making a target for our tester cats to pounce at floor level as well as soar high above--they were always ready to play with this toy. The Rainbow Charmer provides a meaningful connection between cat and human, along with the ability to showcase a cat's athleticism and adorable antics, making this toy a winner.</div>
-            <div class="card" onclick="selectCard(this, 1, false)">The Kitty City Cat Tunnel Bed is a delightful and inventive addition to any cat owner's arsenal of pet accessories. Designed with both play and comfort in mind, this product stands out for its multifunctionality. On one hand, it serves as a cozy bed for feline naps. The soft, plush material is inviting and warm, making it an ideal spot for cats to relax and sleep. This aspect of the product is particularly appreciated by owners of cats who seek comfort and security in their resting spots.</div>
-            <button onclick="nextPage(2)">Next</button>
+            <h2>Is this review real or fake?</h2>
+            <div class="card" onclick="selectCard(1, true)">Love this!  Well made, sturdy, and very comfortable.  I love it!Very pretty
+</div>
+            <button onclick="nextPage()">Next</button>
         </div>
 
-        <!-- Page 3 (hidden initially) -->
+        <!-- Page 3 -->
         <div class="page" id="page3">
-            <h2>Which is the real review?</h2>
-            <div class="card" onclick="selectCard(this, 1, true)">The Cat Dancer Rainbow Charmer provides a fun and energetic way to interact with your cat. This wand toy elicits jumping, swatting, and pouncing from our tester cats, yielding moderate to extreme levels of cat engagement and play level. The 46" colorful rainbow soft fleece fabric waves around, making a target for our tester cats to pounce at floor level as well as soar high above--they were always ready to play with this toy. The Rainbow Charmer provides a meaningful connection between cat and human, along with the ability to showcase a cat's athleticism and adorable antics, making this toy a winner.</div>
-            <div class="card" onclick="selectCard(this, 1, false)">The Kitty City Cat Tunnel Bed is a delightful and inventive addition to any cat owner's arsenal of pet accessories. Designed with both play and comfort in mind, this product stands out for its multifunctionality. On one hand, it serves as a cozy bed for feline naps. The soft, plush material is inviting and warm, making it an ideal spot for cats to relax and sleep. This aspect of the product is particularly appreciated by owners of cats who seek comfort and security in their resting spots.</div>
-            <button onclick="nextPage(2)">Next</button>
+            <h2>Is this review real or fake?</h2>
+            <div class="card" onclick="selectCard(1, true)">love it, a great upgrade from the original.  I've had mine for a couple of years
+</div>
+            <button onclick="nextPage()">Next</button>
+        </div>
+
+        <!-- Page 4 -->
+        <div class="page" id="page4">
+            <h2>Is this review real or fake?</h2>
+            <div class="card" onclick="selectCard(1, true)">This pillow saved my back. I love the look and feel of this pillow.
+</div>
+            <button onclick="nextPage()">Next</button>
+        </div>
+
+        <!-- Page 5 -->
+        <div class="page" id="page5">
+            <h2>Is this review real or fake?</h2>
+            <div class="card" onclick="selectCard(1, true)">Works great, it's Pyrex, I'd expect nothing less from them.
+</div>
+            <button onclick="nextPage()">Next</button>
+        </div>
+
+        <!-- Final Score Page -->
+        <div class="page" id="page6" style="display:none;">
+            <h2>Your Accuracy Score</h2>
+            <div id="score">0%</div>
+            <p>Compare your score with the results of developed models at the end of the project.</p>
         </div>
     </div>
 
