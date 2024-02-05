@@ -3,30 +3,31 @@ let correctAnswers = 0;
 // Define the correct answers for each page: true for real, false for fake
 const correctAnswerSequence = [true, false, false, false, true];
 
-function selectCard(isReal) {
+function selectCard(questionNumber, userChoice) {
     // Check if the user's choice matches the correct answer for the current question
-    let isCorrect = correctAnswerSequence[currentQuestion - 1] === isReal;
+    let isCorrect = correctAnswerSequence[questionNumber - 1] === userChoice;
     if (isCorrect) {
         correctAnswers++;
-        alert("Correct! That was a " + (isReal ? "real" : "fake") + " review.");
+        alert("Correct! That was a " + (userChoice ? "real" : "fake") + " review.");
     } else {
-        alert("Wrong! That was actually a " + (!isReal ? "real" : "fake") + " review.");
+        alert("Wrong! That was actually a " + (!userChoice ? "real" : "fake") + " review.");
     }
     nextPage();
 }
 
 function nextPage() {
-    if (currentQuestion < 5) {
-        document.getElementById("page" + currentQuestion).style.display = "none";
-        currentQuestion++;
-        document.getElementById("page" + currentQuestion).style.display = "block";
+    let currentPage = document.getElementById("page" + currentQuestion);
+    currentPage.style.display = "none";
+    currentQuestion++;
+    if (currentQuestion <= 5) {
+        let nextPage = document.getElementById("page" + currentQuestion);
+        nextPage.style.display = "block";
     } else {
         showFinalScore();
     }
 }
 
 function showFinalScore() {
-    document.getElementById("page" + currentQuestion).style.display = "none"; // Hide the last question
     let score = Math.round((correctAnswers / 5) * 100);
     document.getElementById("score").innerText = `${score}%`;
     document.getElementById("page6").style.display = "block"; // Show the score page
