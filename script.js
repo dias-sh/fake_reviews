@@ -1,38 +1,39 @@
-let currentQuestion = 1;
-let correctAnswers = 0;
-// Define the correct answers for each page: true for real, false for fake
-const correctAnswerSequence = [true, false, false, false, true];
+document.addEventListener('DOMContentLoaded', function() {
+    const reviews = [
+        { text: "Awesome!! Hubby loves it. Great quality! And the rubber one is perfect for when he's working.", correctAnswer: "real" },
+        { text: "I clean all my guns and containers and the tools. I also keep my pistols in a small bag", correctAnswer: "fake" },
+        { text: "Good for the money, not what I expected. Not too hot or too cold.", correctAnswer: "fake" },
+        { text: "These are my first bands and they are the best. I will keep my 2nd as backup.", correctAnswer: "fake" },
+        { text: "I tried the single pack before buying the can. Not my favorite flavor, but always happy with this brand.", correctAnswer: "real" }
+    ];
+    let currentReviewIndex = 0;
+    let score = 0;
 
-function selectCard(questionNumber, userChoice) {
-    // Check if the user's choice matches the correct answer for the current question
-    let isCorrect = correctAnswerSequence[questionNumber - 1] === userChoice;
-    if (isCorrect) {
-        correctAnswers++;
-        alert("Correct! That was a " + (userChoice ? "real" : "fake") + " review.");
-    } else {
-        alert("Wrong! That was actually a " + (!userChoice ? "real" : "fake") + " review.");
+    function updateReview() {
+        if (currentReviewIndex < reviews.length) {
+            document.getElementById('review').innerText = reviews[currentReviewIndex].text;
+        } else {
+            document.getElementById('quiz-container').classList.add('hidden');
+            document.getElementById('result').classList.remove('hidden');
+            document.getElementById('score').innerText = ((score / reviews.length) * 100).toFixed(0) + '%';
+;
+        }
     }
-    nextPage();
-}
 
-function nextPage() {
-    let currentPage = document.getElementById("page" + currentQuestion);
-    currentPage.style.display = "none";
-    currentQuestion++;
-    if (currentQuestion <= 5) {
-        let nextPage = document.getElementById("page" + currentQuestion);
-        nextPage.style.display = "block";
-    } else {
-        showFinalScore();
+    document.getElementById('real').addEventListener('click', function() { handleAnswer('real'); });
+    document.getElementById('fake').addEventListener('click', function() { handleAnswer('fake'); });
+
+    function handleAnswer(answer) {
+        const correctAnswer = reviews[currentReviewIndex].correctAnswer;
+        if (answer === correctAnswer) {
+            alert(`Correct! That was a ${correctAnswer} review`);
+            score++;
+        } else {
+            alert(`Wrong! That was a ${correctAnswer} review`);
+        }
+        currentReviewIndex++;
+        updateReview();
     }
-}
 
-function showFinalScore() {
-    let score = Math.round((correctAnswers / 5) * 100);
-    document.getElementById("score").innerText = `${score}%`;
-    document.getElementById("page6").style.display = "block"; // Show the score page
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById("page1").style.display = "block";
+    updateReview();
 });

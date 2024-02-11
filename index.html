@@ -2,60 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review Authenticity Quiz</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="page-container">
-        <!-- Page 1 -->
-        <div class="page" id="page1">
-            <h2>Is this review real or fake?</h2>
-            <div class="review">Made well holds all my make brushes, pencils, mascara etc.</div>
-            <button onclick="selectCard(1, true)">Real</button>
-            <button onclick="selectCard(1, false)">Fake</button>
-        </div>
-
-        <!-- Page 2 -->
-        <div class="page" id="page2">
-            <h2>Is this review real or fake?</h2>
-            <div class="review">Love this!  Well made, sturdy, and very comfortable.  I love it!Very pretty</div>
-            <button onclick="selectCard(1, true)">Real</button>
-            <button onclick="selectCard(1, false)">Fake</button>
-        </div>
-
-        <!-- Page 3 -->
-        <div class="page" id="page3">
-            <h2>Is this review real or fake?</h2>
-            <div class="review">love it, a great upgrade from the original.  I've had mine for a couple of years</div>
-            <button onclick="selectCard(1, true)">Real</button>
-            <button onclick="selectCard(1, false)">Fake</button>
-        </div>
-
-        <!-- Page 4 -->
-        <div class="page" id="page4">
-            <h2>Is this review real or fake?</h2>
-            <div class="review">This pillow saved my back. I love the look and feel of this pillow.</div>
-            <button onclick="selectCard(1, true)">Real</button>
-            <button onclick="selectCard(1, false)">Fake</button>
-        </div>
-
-        <!-- Page 5 -->
-        <div class="page" id="page5">
-            <h2>Is this review real or fake?</h2>
-            <div class="review">Works great, it's Pyrex, I'd expect nothing less from them.</div>
-            <button onclick="selectCard(1, true)">Real</button>
-            <button onclick="selectCard(1, false)">Fake</button>
-        </div>
-
-        <!-- Final Score Page -->
-        <div class="page" id="page6" style="display:none;">
-            <h2>Your Accuracy Score</h2>
-            <div id="score">0%</div>
-            <p>Compare your score with the results of developed models at the end of the project.</p>
-        </div>
+    <div id="quiz-container">
+        <div id="question" class="question">Is this review real or fake?</div>
+        <div id="review" class="review">[Review text will go here]</div>
+        <button id="real" class="btn">Real</button>
+        <button id="fake" class="btn">Fake</button>
     </div>
-
+    <div id="result" class="hidden">
+        <div id="score-text">Your Accuracy Score:</div>
+        <div id="score" class="score">0%</div>
+        <div>Compare your score with the results of developed models at the end of the project.</div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

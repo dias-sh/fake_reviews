@@ -1,41 +1,57 @@
-body {
+body, html {
     font-family: Arial, sans-serif;
     text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
 }
 
-.page {
+.question, .review, .btn, #result {
+    margin: 20px;
+}
+
+.review {
+    margin-bottom: 40px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
     display: none;
 }
 
-.page.active {
-    display: block;
+#score-text {
+    font-size: 24px; /* Increase font size for prominence */
+    margin: 20px 0; /* Adjust spacing as needed */
 }
 
-.card {
-    border: 1px solid #ddd;
+.score {
+    font-size: 60px; /* Increased font size */
+    font-weight: bold;
+    color: #007bff;
+    margin: 20px 0;
+}
+
+#result {
+    text-align: center; /* Ensure everything is centered */
     padding: 20px;
-    margin: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.selected-true {
-    border-color: green;
-    color: green;
-}
-
-.selected-false {
-    border-color: red;
-    color: red;
-}
-
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-#score {
-    font-size: 48px;
-    margin: 20px;
+    background-color: #fff; /* Background to make it stand out from the rest of the page */
+    border-radius: 5px; /* Optional: adds rounded corners for a softer look */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow for depth */
+    width: 80%; /* Adjust width as necessary */
+    margin: 20px auto; /* Center the result div horizontally */
 }
